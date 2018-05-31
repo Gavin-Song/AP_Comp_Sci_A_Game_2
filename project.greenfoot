@@ -1,0 +1,33 @@
+#Greenfoot properties
+#Thu May 31 18:40:17 EDT 2018
+project.charset=UTF-8
+mainWindow.height=600
+editor.fx.0.width=0
+readme.y=10
+readme.x=10
+version=3.0.0
+class.Button.superclass=GUI
+readme.height=58
+class.Building.superclass=MilitaryUnit
+class.TextLabel.superclass=GUI
+world.lastInstantiated=MapWorld
+class.WorldMap.superclass=greenfoot.Actor
+class.MobileUnit.superclass=MilitaryUnit
+editor.fx.0.y=0
+mainWindow.y=40
+mainWindow.x=40
+editor.fx.0.x=0
+class.TitleScreenWorld.superclass=greenfoot.World
+readme.width=47
+editor.fx.0.height=0
+package.numDependencies=0
+class.GUI.superclass=greenfoot.Actor
+class.MapWorld.superclass=greenfoot.World
+package.numTargets=0
+mainWindow.width=850
+class.Config.superclass=
+class.MenuButton.superclass=Button
+class.MilitaryUnit.superclass=greenfoot.Actor
+readme.name=@README
+class.InvisibleButton.superclass=Button
+class.Country.superclass=greenfoot.Actor
