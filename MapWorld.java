@@ -16,6 +16,7 @@ public class MapWorld extends World
     public MapWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(2000, 1075, 1); 
+        super(1500, 806, 1); 
+        getBackground().scale(1500, 806);
     }
 }
