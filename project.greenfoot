@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu May 31 18:40:17 EDT 2018
+#Fri Jun 01 08:07:51 EDT 2018
 project.charset=UTF-8
 mainWindow.height=600
 editor.fx.0.width=0
@@ -8,13 +8,14 @@ readme.x=10
 version=3.0.0
 class.Button.superclass=GUI
 readme.height=58
+class.MapWorld.image=Map.png
 class.Building.superclass=MilitaryUnit
 class.TextLabel.superclass=GUI
 world.lastInstantiated=MapWorld
 class.WorldMap.superclass=greenfoot.Actor
-class.MobileUnit.superclass=MilitaryUnit
 editor.fx.0.y=0
 mainWindow.y=40
+class.MobileUnit.superclass=MilitaryUnit
 mainWindow.x=40
 editor.fx.0.x=0
 class.TitleScreenWorld.superclass=greenfoot.World
