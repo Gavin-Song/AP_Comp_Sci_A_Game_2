@@ -12,7 +12,7 @@ public class WorldMap extends Actor
     private ArrayList<Country> countries;
     
     public WorldMap(){
-        getImage().scale(getWorld().getWidth(), getWorld().getHeight());
+        getImage().scale(Config.WORLD_WIDTH, Config.WORLD_HEIGHT);
     }
     /**
      * Act - do whatever the WorldMap wants to do. This method is called whenever

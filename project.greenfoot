@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Jun 04 08:15:23 EDT 2018
+#Mon Jun 04 08:19:16 EDT 2018
 editor.fx.0.height=1031
 target2.width=90
 target8.name=City
@@ -22,8 +22,8 @@ target6.x=0
 target1.showInterface=false
 target4.y=0
 target4.x=0
-target9.type=ClassTarget
 target4.showInterface=false
+target9.type=ClassTarget
 target2.y=0
 target14.height=50
 target2.x=0
@@ -146,8 +146,8 @@ target4.name=MapWorld
 readme.y=10
 readme.x=10
 target4.height=50
-readme.height=58
 target12.typeParameters=
-target1.width=80
+readme.height=58
 target13.y=0
+target1.width=80
 target13.x=0
