@@ -1,21 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.*;
 
 /**
- * Write a description of class WorldMap here.
+ * Write a description of class Silo here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WorldMap extends Actor
+public class Silo extends Building
 {
-    private ArrayList<Country> countries;
-    
-    public WorldMap(){
-        getImage().scale(Config.WORLD_WIDTH, Config.WORLD_HEIGHT);
+    public Silo(Country country){
+        super(country);
     }
     /**
-     * Act - do whatever the WorldMap wants to do. This method is called whenever
+     * Act - do whatever the Silo wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
