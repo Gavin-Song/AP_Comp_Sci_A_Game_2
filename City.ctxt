@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=City
+comment1.params=name\ population\ country\ x\ y
+comment1.target=City(java.lang.String,\ int,\ Country,\ int,\ int)
+comment2.params=new_country
+comment2.target=void\ occupy(Country)
+comment3.params=deaths
+comment3.target=void\ reducePopulation(int)
+comment4.params=
+comment4.target=java.lang.String\ getName()
+comment5.params=
+comment5.target=int\ getPopulation()
+comment6.params=
+comment6.target=Country\ getCountry()
+comment7.params=
+comment7.target=int\ getX()
+comment8.params=
+comment8.target=int\ getY()
+numComments=9
