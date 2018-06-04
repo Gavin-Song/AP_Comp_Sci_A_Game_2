@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Silo extends Building
 {
+    public Silo(Country country){
+        super(country);
+    }
     /**
      * Act - do whatever the Silo wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
