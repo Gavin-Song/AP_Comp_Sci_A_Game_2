@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 
 /**
  * Write a description of class WorldMap here.
@@ -8,6 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class WorldMap extends Actor
 {
+    private ArrayList<Country> countries;
+    
+    public WorldMap(){
+        getImage().scale(getWorld().getWidth(), getWorld().getHeight());
+    }
     /**
      * Act - do whatever the WorldMap wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
