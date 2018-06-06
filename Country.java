@@ -31,7 +31,7 @@ public class Country extends Actor
     }
     
     public void addBuilding(String type, int x, int y) {
-        if (WorldMap.getBackground().getColorAt(x, y)) {
+        if (this.getWorld().getBackground().getColorAt(x, y)) {
             // Not in country territory
             return;
         }
