@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class NavalFactory extends Factory
 {
-    public NavalFactory(Country country){
-        super(country);
+    public NavalFactory(Country country, int x, int y){
+        super(country, x, y);
     }
     /**
      * Act - do whatever the NavalFactory wants to do. This method is called whenever
