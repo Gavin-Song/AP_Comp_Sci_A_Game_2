@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Silo extends Building
 {
-    public Silo(Country country, int x, int y){
-        super(country, x, y);
+    public Silo(Country country, int hp){
+        super(country,hp);
     }
     /**
      * Act - do whatever the Silo wants to do. This method is called whenever

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class NavalUnit extends MobileUnit
 {
-    public NavalUnit (Country country) {
-        super(country);
+    public NavalUnit (Country country, int hp) {
+        super(country,hp);
     }
 }

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Destroyer
 comment0.text=\n\ Write\ a\ description\ of\ class\ Destroyer\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=country
-comment1.target=Destroyer(Country)
+comment1.params=country\ hp
+comment1.target=Destroyer(Country,\ int)
 numComments=2

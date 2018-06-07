@@ -9,8 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MilitaryUnit extends Actor
 {
     private Country country;  // Country unit belongs to
-    
-    public MilitaryUnit(Country country) {
+    private int health;
+    public MilitaryUnit(Country country, int hp) {
         this.country = country;
+        health = hp;
+    }
+    public int getHealth()
+    {
+        return(health);
     }
 }

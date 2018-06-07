@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Radar extends Building
 {
-    public Radar(Country country, int x, int y){
-        super(country, x, y);
+    public Radar(Country country, int hp){
+        super(country,hp);
     }
     /**
      * Act - do whatever the Radar wants to do. This method is called whenever
