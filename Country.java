@@ -15,14 +15,17 @@ public class Country extends Actor
     private String name;
     private String flag;
     
+    private Color color;
+    
     private HashMap building_count = new HashMap();
 
-    public Country(String name, String flag) {
+    public Country(String name, String flag, Color color) {
         this.cities = new ArrayList<City>();
         this.units = new ArrayList<MobileUnit>();
         
         this.name = name;
         this.flag = flag;
+        this.color = color;
         
         building_count.put("naval", 3);
         building_count.put("air", 6);
@@ -31,7 +34,7 @@ public class Country extends Actor
     }
     
     public void addBuilding(String type, int x, int y) {
-        if (WorldMap.getBackground().getColorAt(x, y)) {
+        if (!this.getWorld().getBackground().getColorAt(x, y).equals(this.color)) {
             // Not in country territory
             return;
         }
