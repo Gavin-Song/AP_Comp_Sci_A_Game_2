@@ -13,7 +13,7 @@ public abstract class MobileUnit extends MilitaryUnit
     }
     void moveTo(int x, int y) {
         turnTowards(x,y);
-        while(!(getX() == x && getY() == y)){
+        while(!(getX() == x && getY() == y)) {
             move(5);
         }
     }
