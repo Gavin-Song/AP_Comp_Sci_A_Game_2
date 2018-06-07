@@ -10,6 +10,7 @@ import java.util.*;
 public class MapWorld extends World
 {
     private ArrayList<Country> countries;
+    private GameState game_state;
     
     /**
      * Constructor for objects of class MapWorld.
@@ -20,6 +21,9 @@ public class MapWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1500, 806, 1); 
         getBackground().scale(Config.WORLD_WIDTH, Config.WORLD_HEIGHT);
+
+        // Create a game state
+        game_state = new GameState();
 
         // Add all the countries. Do not touch
         countries = new ArrayList<Country>();
@@ -43,8 +47,29 @@ public class MapWorld extends World
     public void act() {
         MouseInfo mouse = Greenfoot.getMouseInfo();   
         if (mouse != null && mouse.getButton() == 1 && Greenfoot.mouseClicked(null)) {
-            for (Country country: countries) {
-                country.addBuilding("silo", mouse.getX(), mouse.getY());
+            /* All mouse clicks are handled here
+               Yay for code quality */
+            
+            switch (game_state.getStage()) {
+                case 0: {
+                    /* Stage 0 You can add different buildings to your respective country */
+                    for (Country country: countries) {
+                        country.addBuilding("silo", mouse.getX(), mouse.getY());
+                    }
+                    break;
+                }
+                case 1: {
+                    /* Stage 1 You can move your units that are made in factories */
+                    break;
+                }
+                case 2: {
+                    /* Stage 2 You can fire nukes and move units */
+                    break;
+                }
+                default: {
+                    // Game over
+                    break;
+                }
             }
         }
     }

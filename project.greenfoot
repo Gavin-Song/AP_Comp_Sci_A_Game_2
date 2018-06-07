@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Jun 07 09:14:57 EDT 2018
+#Thu Jun 07 09:18:07 EDT 2018
 target16.name=AirFactory
 class.Factory.superclass=Building
 dependency35.to=Country
@@ -105,7 +105,7 @@ dependency26.to=Building
 class.City.superclass=greenfoot.Actor
 class.Config.superclass=
 mainWindow.y=23
-mainWindow.x=4
+mainWindow.x=0
 target3.showInterface=false
 target12.showInterface=false
 target17.typeParameters=
@@ -216,7 +216,7 @@ target25.type=ClassTarget
 dependency33.from=Country
 editor.fx.0.y=23
 class.Battleship.superclass=NavalUnit
-editor.fx.0.x=459
+editor.fx.0.x=456
 dependency11.to=Factory
 target6.height=50
 editor.fx.0.width=1108
@@ -267,7 +267,7 @@ dependency28.type=UsesDependency
 dependency25.from=Country
 target29.height=50
 target10.y=0
-target3.type=ClassTarget
+target3.type=AbstractTarget
 target10.x=0
 target23.showInterface=false
 target25.typeParameters=
