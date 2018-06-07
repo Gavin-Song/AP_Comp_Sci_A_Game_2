@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Destroyer extends NavalUnit
 {
-    public Destroyer (Country country) {
-        super(country);
+    public Destroyer (Country country, int hp) {
+        super(country,hp);
     }
 }

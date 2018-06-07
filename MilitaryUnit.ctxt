@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.target=MilitaryUnit
 comment0.text=\n\ Write\ a\ description\ of\ class\ MilitaryUnit\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=country
-comment1.target=MilitaryUnit(Country)
-numComments=2
+comment1.params=country\ hp
+comment1.target=MilitaryUnit(Country,\ int)
+comment2.params=
+comment2.target=int\ getHealth()
+numComments=3

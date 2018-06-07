@@ -8,18 +8,18 @@ public class BuildingFactory
 {
     private BuildingFactory() {}
     
-    public static Building getBuilding(String type, Country country, int x, int y) {
+    public static Building getBuilding(String type, Country country, int hp) {
         if ("air".equals(type)) {
-            return new AirFactory(country, x, y);
+            return new AirFactory(country, hp);
         }
         else if ("naval".equals(type)) {
-            return new NavalFactory(country, x, y);
+            return new NavalFactory(country, hp);
         }
         else if ("radar".equals(type)) {
-            return new Radar(country, x, y);
+            return new Radar(country, hp);
         }
         else if ("silo".equals(type)) {
-            return new Silo(country, x, y);
+            return new Silo(country, hp);
         }
         throw new UnsupportedOperationException("Invalid Building type '" + type + "'");
     }

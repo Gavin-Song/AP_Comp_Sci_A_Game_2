@@ -44,7 +44,7 @@ public class Country extends Actor
             return;
         }
         
-        Building to_add = BuildingFactory.getBuilding(type, this, x, y);
+        Building to_add = BuildingFactory.getBuilding(type, this, 1000);
         this.getWorld().addObject(to_add, x, y);
         
         building_count.put(type, (Integer)building_count.get(type) - 1);

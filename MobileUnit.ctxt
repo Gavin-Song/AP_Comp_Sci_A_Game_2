@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.target=MobileUnit
 comment0.text=\n\ Write\ a\ description\ of\ class\ MobileUnit\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=country
-comment1.target=MobileUnit(Country)
-numComments=2
+comment1.params=country\ hp
+comment1.target=MobileUnit(Country,\ int)
+comment2.params=x\ y
+comment2.target=void\ moveTo(int,\ int)
+numComments=3

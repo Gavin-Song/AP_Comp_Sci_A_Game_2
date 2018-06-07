@@ -11,8 +11,8 @@ public class Factory extends Building
     private static int FACTORY_WIDTH = 100;
     private static int FACTORY_HEIGHT = 100;
     
-    public Factory(Country country, int x, int y){
-        super(country, x, y);
+    public Factory(Country country, int hp){
+        super(country,hp);
         this.getImage().scale(FACTORY_WIDTH, FACTORY_HEIGHT);
     }
     

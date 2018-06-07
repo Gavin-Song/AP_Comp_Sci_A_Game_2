@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Jun 07 09:11:44 EDT 2018
+#Thu Jun 07 09:14:57 EDT 2018
 target16.name=AirFactory
 class.Factory.superclass=Building
 dependency35.to=Country
@@ -105,7 +105,7 @@ dependency26.to=Building
 class.City.superclass=greenfoot.Actor
 class.Config.superclass=
 mainWindow.y=23
-mainWindow.x=168
+mainWindow.x=4
 target3.showInterface=false
 target12.showInterface=false
 target17.typeParameters=
