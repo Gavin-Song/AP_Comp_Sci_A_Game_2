@@ -50,6 +50,15 @@ public class Country extends Actor
         building_count.put(type, (Integer)building_count.get(type) - 1);
     }
     
+    public String getNonEmptyBuilding() {
+        for (String type: Config.building_types) {
+            if ((int)building_count.get(type) > 0) {
+                return type;
+            }
+        }
+        return null;
+    }
+    
     public String getName() {
         return this.name;
     }
