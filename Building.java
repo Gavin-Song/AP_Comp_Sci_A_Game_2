@@ -11,6 +11,6 @@ public class Building extends MilitaryUnit
     public Building(Country country, int hp) {
         super(country,hp);
         
-        this.getImage().scale(10, 10);
+        this.getImage().scale(25,25);
     }
 }
