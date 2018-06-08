@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri Jun 08 07:52:33 EDT 2018
+#Fri Jun 08 07:58:53 EDT 2018
 target16.name=AirFactory
 class.Factory.superclass=Building
 target26.width=80
@@ -437,6 +437,6 @@ target19.showInterface=false
 target1.height=50
 mainWindow.width=1920
 class.GameState.superclass=
-class.Silo.image=lighthouse.png
+class.Silo.image=2000px-Nuclear_symbol.svg.png
 target4.typeParameters=
 =\=\=\=\=\=\=

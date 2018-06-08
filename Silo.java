@@ -10,6 +10,7 @@ public class Silo extends Building
 {
     public Silo(Country country, int hp){
         super(country,hp);
+        getImage().scale(25,25);
     }
     /**
      * Act - do whatever the Silo wants to do. This method is called whenever

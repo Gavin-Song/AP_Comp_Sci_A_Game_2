@@ -33,6 +33,10 @@ public class Country extends Actor
         building_count.put("silo", 5);
     }
     
+    public HashMap getBuildingCount() {
+        return building_count;
+    }
+    
     public void addBuilding(String type, int x, int y) {
         if (!this.getWorld().getBackground().getColorAt(x, y).equals(this.color)) {
             // Not in country territory
