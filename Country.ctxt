@@ -5,4 +5,6 @@ comment1.params=name\ flag\ color
 comment1.target=Country(java.lang.String,\ java.lang.String,\ greenfoot.Color)
 comment2.params=type\ x\ y
 comment2.target=void\ addBuilding(java.lang.String,\ int,\ int)
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ getName()
+numComments=4

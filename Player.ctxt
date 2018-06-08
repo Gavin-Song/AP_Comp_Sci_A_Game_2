@@ -3,4 +3,6 @@ comment0.target=Player
 comment0.text=\n\ Write\ a\ description\ of\ class\ Player\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=human\ country\ score
 comment1.target=Player(boolean,\ Country,\ int)
-numComments=2
+comment2.params=
+comment2.target=Country\ getCountry()
+numComments=3

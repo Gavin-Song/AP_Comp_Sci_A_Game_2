@@ -16,4 +16,8 @@ public abstract class Player
         this.country = country;
         this.score = score;
     }
+    
+    public Country getCountry() {
+        return country;
+    }
 }

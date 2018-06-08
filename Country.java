@@ -49,4 +49,8 @@ public class Country extends Actor
         
         building_count.put(type, (Integer)building_count.get(type) - 1);
     }
+    
+    public String getName() {
+        return this.name;
+    }
 }
