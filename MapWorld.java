@@ -9,8 +9,11 @@ import java.util.*;
  */
 public class MapWorld extends World
 {
-    private ArrayList<Country> countries;
-    private GameState game_state;
+    // Hack make variables static so we can reference them
+    // via MapWorld.variable
+    private static ArrayList<Country> countries;
+    private static ArrayList<ImageButton> building_buttons;
+    private static GameState game_state;
     
     /**
      * Constructor for objects of class MapWorld.
@@ -39,9 +42,28 @@ public class MapWorld extends World
          */
         for (Country c: countries) {
             c.getImage().scale(1, 1);
-            addObject(c, -10, -10);
+            this.addObject(c, -10, -10);
         }
         
+        // Image buttons for placing buildings
+        building_buttons = new ArrayList<ImageButton>();
+        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "naval"));
+        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "air"));
+        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "radar"));
+        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "silo"));
+ 
+        // Add buttons to the world
+        int i = 0;
+        for (ImageButton button: building_buttons) {
+            this.addObject(button, (int)(Config.SQUARE_BUTTON_SIZE * 1.5 + i * Config.SQUARE_BUTTON_SIZE * 1.5), 
+                (int)(this.getHeight() - Config.SQUARE_BUTTON_SIZE * 1.5));
+            i++;
+        }
+        
+        
+        
+        //TODO REMOVE THIS
+        game_state.createHumanPlayer("Brazil");
     }
     
     public void act() {
@@ -52,10 +74,7 @@ public class MapWorld extends World
             
             switch (game_state.getStage()) {
                 case 0: {
-                    /* Stage 0 You can add different buildings to your respective country */
-                    for (Country country: countries) {
-                        country.addBuilding("silo", mouse.getX(), mouse.getY());
-                    }
+                    this.handleStage0Click(mouse);
                     break;
                 }
                 case 1: {
@@ -72,5 +91,18 @@ public class MapWorld extends World
                 }
             }
         }
+    }
+    
+    public void handleStage0Click(MouseInfo mouse) {
+        /* Stage 0 You can add different buildings to your respective country */
+        game_state.getHumanPlayer().getCountry().addBuilding("silo", mouse.getX(), mouse.getY()); 
+    }
+    
+    public static ArrayList<Country> getCountries() {
+        return countries;
+    }
+    
+    public static GameState getGameState() {
+        return game_state;
     }
 }

@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
  * Handles the current state of the game
  * 
@@ -13,8 +15,11 @@ public class GameState
      */
     private int stage = 0;
     
+    private HumanPlayer human_player;
+    private ArrayList<AIPlayer> ai_players;
+    
     public GameState() {
-        // Nothing goes here
+
     }
     
     public int getStage() {
@@ -23,5 +28,18 @@ public class GameState
     
     public void advanceStage() {
         this.stage++;
+    }
+    
+    public HumanPlayer getHumanPlayer() {
+        return human_player;
+    }
+    
+    public void createHumanPlayer(String country_name) {
+        for (Country country: MapWorld.getCountries()) {
+            if (country.getName().equals(country_name)) {
+                human_player = new HumanPlayer(country, 0);
+                break;
+            }
+        }
     }
 }
