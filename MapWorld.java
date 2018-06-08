@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class MapWorld extends World
 {
-    private TitleScreenWorld titleScreen; 
+    int frames = 0;
     /**
      * Constructor for objects of class MapWorld.
      * 
@@ -11,9 +11,10 @@ public class MapWorld extends World
     {    
         super(1500, 806, 1); 
         getBackground().scale(Config.WORLD_WIDTH, Config.WORLD_HEIGHT);
-        getBackground().setTransparency(0);
-        titleScreen = new TitleScreenWorld();
-        Greenfoot.setWorld(titleScreen);
+        getBackground().setTransparency(200);        
+    }
+    public void act()
+    {
         
     }
 }

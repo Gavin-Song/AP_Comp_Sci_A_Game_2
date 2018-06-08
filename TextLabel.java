@@ -9,7 +9,7 @@ public class TextLabel extends GUI
     }
     public void displayText()
     {
-        getImage().drawString(text, getImage().getWidth() / 2, getImage().getHeight() / 2);
+        getImage().drawString(text, 70, getImage().getHeight() / 2);
     }
     /**
      * Act - do whatever the TextLabel wants to do. This method is called whenever

@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Jun 07 09:38:54 EDT 2018
+#Fri Jun 08 07:48:33 EDT 2018
 target16.name=AirUnit
 class.Factory.superclass=Building
 target26.width=80
@@ -92,8 +92,8 @@ target8.height=50
 target25.showInterface=false
 class.City.superclass=greenfoot.Actor
 class.Config.superclass=
-mainWindow.y=89
-mainWindow.x=143
+mainWindow.y=61
+mainWindow.x=118
 target3.showInterface=false
 target12.showInterface=false
 target17.typeParameters=
