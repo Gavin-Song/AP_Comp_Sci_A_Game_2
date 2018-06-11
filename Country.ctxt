@@ -3,22 +3,14 @@ comment0.target=Country
 comment0.text=\n\ Write\ a\ description\ of\ class\ Country\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=name\ flag\ color
 comment1.target=Country(java.lang.String,\ java.lang.String,\ greenfoot.Color)
-<<<<<<< HEAD
 comment2.params=
 comment2.target=java.util.HashMap\ getBuildingCount()
-comment3.params=type\ x\ y
-comment3.target=void\ addBuilding(java.lang.String,\ int,\ int)
-=======
-comment2.params=type\ x\ y
-comment2.target=void\ addBuilding(java.lang.String,\ int,\ int)
 comment3.params=
-<<<<<<< HEAD
-comment3.target=java.lang.String\ getNonEmptyBuilding()
-comment4.params=
-comment4.target=java.lang.String\ getName()
-numComments=5
-=======
-comment3.target=java.lang.String\ getName()
->>>>>>> 46146b4dab4ae55545a2ef8d5946707a295ac317
-numComments=4
->>>>>>> afbc464cd80e50456059d7a163f6c0c651efbc05
+comment3.target=java.util.ArrayList\ getCities()
+comment4.params=type\ x\ y
+comment4.target=void\ addBuilding(java.lang.String,\ int,\ int)
+comment5.params=
+comment5.target=java.lang.String\ getNonEmptyBuilding()
+comment6.params=
+comment6.target=java.lang.String\ getName()
+numComments=7

@@ -35,6 +35,12 @@ public class MapWorld extends World
         countries.add(new Country("Second Soviet Union", "", new Color(255, 150, 0)));
         countries.add(new Country("Greater Asian Coalition", "", new Color(255, 0, 0)));
         countries.add(new Country("Brazil", "", new Color(0, 255, 42)));
+        countries.get(4).getCities().add(new City("Rio de Janiero", 6320000, countries.get(4), 371,411));
+        countries.get(4).getCities().add(new City("Sao Paulo", 12000000, countries.get(4), 425,493));
+        countries.get(4).getCities().add(new City("Salvador", 2700000, countries.get(4), 461,541));
+        addObject(countries.get(4).getCities().get(0), 371,411);
+        addObject(countries.get(4).getCities().get(1), 425,493);
+        addObject(countries.get(4).getCities().get(2), 461,541);
         countries.add(new Country("Arabian Empire", "", new Color(252, 255, 0)));
         
         /* Hack: we're adding countries but making them 1x1 pixels to not display them
@@ -95,7 +101,8 @@ public class MapWorld extends World
     
     public void handleStage0Click(MouseInfo mouse) {
         /* Stage 0 You can add different buildings to your respective country */
-        game_state.getHumanPlayer().getCountry().addBuilding("silo", mouse.getX(), mouse.getY()); 
+        game_state.getHumanPlayer().getCountry().addBuilding("silo", mouse.getX(), mouse.getY());
+        System.out.println(mouse.getX() + "," + mouse.getY()); //to be deleted later
     }
     
     public static ArrayList<Country> getCountries() {

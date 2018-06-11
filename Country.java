@@ -37,6 +37,11 @@ public class Country extends Actor
         return building_count;
     }
     
+    public ArrayList<City> getCities()
+    {
+        return(cities);
+    }
+    
     public void addBuilding(String type, int x, int y) {
         if (!this.getWorld().getBackground().getColorAt(x, y).equals(this.color)) {
             // Not in country territory
