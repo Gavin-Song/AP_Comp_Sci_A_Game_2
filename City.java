@@ -25,6 +25,8 @@ public class City extends Actor
        
        this.x = MAP_X + x * MAP_SCALE;
        this.y = MAP_Y + y * MAP_SCALE;
+       
+       getImage().scale(25,25);
     }
     
     public void occupy (Country new_country) {
