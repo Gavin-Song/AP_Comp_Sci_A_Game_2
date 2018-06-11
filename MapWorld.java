@@ -12,7 +12,13 @@ public class MapWorld extends World
     // Hack make variables static so we can reference them
     // via MapWorld.variable
     private static ArrayList<Country> countries;
+    
+    // Stage 1 stuff
     private static ArrayList<ImageButton> building_buttons;
+    private static ArrayList<TextLabel> building_labels;
+    private static TextLabel selected_building_label;
+    private static String selected_building = "silo";
+    
     private static GameState game_state;
     
     /**
@@ -52,6 +58,13 @@ public class MapWorld extends World
         building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "radar"));
         building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "silo"));
  
+        // Text labels for placing buildings
+        building_labels = new ArrayList<TextLabel>();
+        building_labels.add(new TextLabel(String.valueOf(this.countries.get(0).getBuildingCount().get("naval")), 30));
+        building_labels.add(new TextLabel(String.valueOf(this.countries.get(0).getBuildingCount().get("air")), 30));
+        building_labels.add(new TextLabel(String.valueOf(this.countries.get(0).getBuildingCount().get("radar")), 30));
+        building_labels.add(new TextLabel(String.valueOf(this.countries.get(0).getBuildingCount().get("silo")), 30));
+
         // Add buttons to the world
         int i = 0;
         for (ImageButton button: building_buttons) {
@@ -59,6 +72,15 @@ public class MapWorld extends World
                 (int)(this.getHeight() - Config.SQUARE_BUTTON_SIZE * 1.5));
             i++;
         }
+        i = 0;
+        for (TextLabel label: building_labels) {
+            this.addObject(label, (int)(Config.SQUARE_BUTTON_SIZE * 1.5 + i * Config.SQUARE_BUTTON_SIZE * 1.5 + Config.SQUARE_BUTTON_SIZE / 2), 
+                (int)(this.getHeight() - Config.SQUARE_BUTTON_SIZE * 0.75));
+            i++;
+        }
+        selected_building_label = new TextLabel("Selected: Silo", 30);
+        this.addObject(selected_building_label, (int)(Config.SQUARE_BUTTON_SIZE * 1.5 + Config.SQUARE_BUTTON_SIZE / 2), 
+                (int)(this.getHeight() - Config.SQUARE_BUTTON_SIZE * 0.35));
         
         
         
@@ -95,7 +117,23 @@ public class MapWorld extends World
     
     public void handleStage0Click(MouseInfo mouse) {
         /* Stage 0 You can add different buildings to your respective country */
-        game_state.getHumanPlayer().getCountry().addBuilding("silo", mouse.getX(), mouse.getY()); 
+        for (ImageButton button: building_buttons) {
+            if (button.isClicked()) {
+                selected_building = button.getName();
+                break;
+            }
+        }
+        
+        this.updateAllLabels();
+        game_state.getHumanPlayer().getCountry().addBuilding(selected_building, mouse.getX(), mouse.getY()); 
+    }
+    
+    public void updateAllLabels() {
+        building_labels.get(0).updateText(String.valueOf(game_state.getHumanPlayer().getCountry().getBuildingCount().get("naval")));
+        building_labels.get(1).updateText(String.valueOf(game_state.getHumanPlayer().getCountry().getBuildingCount().get("air")));
+        building_labels.get(2).updateText(String.valueOf(game_state.getHumanPlayer().getCountry().getBuildingCount().get("radar")));
+        building_labels.get(3).updateText(String.valueOf(game_state.getHumanPlayer().getCountry().getBuildingCount().get("silo")));
+        selected_building_label.updateText("Selected: " + selected_building.substring(0, 1).toUpperCase() + selected_building.substring(1));
     }
     
     public static ArrayList<Country> getCountries() {
