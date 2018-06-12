@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Jun 12 08:23:45 EDT 2018
+#Tue Jun 12 08:27:03 EDT 2018
 target16.name=Battleship
 class.Factory.superclass=Building
 dependency35.to=Country
@@ -120,8 +120,8 @@ target25.showInterface=false
 dependency26.to=MapWorld
 class.City.superclass=greenfoot.Actor
 class.Config.superclass=
-mainWindow.y=61
-mainWindow.x=106
+mainWindow.y=131
+mainWindow.x=291
 target3.showInterface=false
 target12.showInterface=false
 target17.typeParameters=

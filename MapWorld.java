@@ -148,4 +148,12 @@ public class MapWorld extends World
         return countries;
     }
    
+    public Country getCountryByName(String name)
+    {
+        for(Country x: countries)
+        {
+            if(x.getName().equals(name))
+            return(x);
+        }
+    }
 }
