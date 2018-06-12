@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class TextLabel extends GUI
 {
-<<<<<<< HEAD
+    //<<<<<<< HEAD
     private String text;
     private int h;
     private Font font;
@@ -15,13 +15,14 @@ public class TextLabel extends GUI
         
         image = new GreenfootImage(this.getImage());
         this.setImage(image);
-        this.getImage().scale(120, h);
+        this.getImage().scale(txt.length * 5 + 40, h);
+        //etImage().setTransparency(0);
         
         this.font = new Font(h / 2);
         this.image = this.getImage();
     }
     
-=======
+    //=======
     String text;
     public TextLabel(String a)
     {
@@ -35,7 +36,7 @@ public class TextLabel extends GUI
      * Act - do whatever the TextLabel wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
->>>>>>> title-screen
+    //>>>>>>> title-screen
     public void act() 
     {
         GreenfootImage img = new GreenfootImage(image);
