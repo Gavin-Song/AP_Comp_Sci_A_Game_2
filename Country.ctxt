@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.target=Country
 comment0.text=\n\ Write\ a\ description\ of\ class\ Country\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+<<<<<<< HEAD
 comment1.params=name\ flag\ color
 comment1.target=Country(java.lang.String,\ java.lang.String,\ greenfoot.Color)
 comment2.params=
@@ -14,3 +15,9 @@ comment5.target=java.lang.String\ getNonEmptyBuilding()
 comment6.params=
 comment6.target=java.lang.String\ getName()
 numComments=7
+=======
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Country\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=2
+>>>>>>> title-screen

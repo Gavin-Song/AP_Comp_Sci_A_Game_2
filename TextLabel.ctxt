@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=TextLabel
+<<<<<<< HEAD
 comment0.text=\n\ Write\ a\ description\ of\ class\ TextLabel\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=txt\ h
 comment1.target=TextLabel(java.lang.String,\ int)
@@ -7,4 +8,13 @@ comment2.params=
 comment2.target=void\ act()
 comment3.params=s
 comment3.target=void\ updateText(java.lang.String)
+=======
+comment1.params=a
+comment1.target=TextLabel(java.lang.String)
+comment2.params=
+comment2.target=void\ displayText()
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ TextLabel\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+>>>>>>> title-screen
 numComments=4

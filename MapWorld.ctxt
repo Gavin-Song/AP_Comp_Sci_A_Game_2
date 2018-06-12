@@ -1,11 +1,11 @@
 #BlueJ class context
 comment0.target=MapWorld
-comment0.text=\n\ Write\ a\ description\ of\ class\ MapWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=MapWorld()
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MapWorld.\n\ \n
 comment2.params=
 comment2.target=void\ act()
+<<<<<<< HEAD
 comment3.params=mouse
 comment3.target=void\ handleStage0Click(greenfoot.MouseInfo)
 comment4.params=
@@ -15,3 +15,6 @@ comment5.target=java.util.ArrayList\ getCountries()
 comment6.params=
 comment6.target=GameState\ getGameState()
 numComments=7
+=======
+numComments=3
+>>>>>>> title-screen

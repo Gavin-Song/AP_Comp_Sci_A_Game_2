@@ -1,6 +1,11 @@
 #BlueJ class context
 comment0.target=NavalUnit
 comment0.text=\n\ Write\ a\ description\ of\ class\ NavalUnit\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+<<<<<<< HEAD
 comment1.params=country\ hp
 comment1.target=NavalUnit(Country,\ int)
+=======
+comment1.params=country
+comment1.target=NavalUnit(Country)
+>>>>>>> title-screen
 numComments=2
