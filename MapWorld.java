@@ -13,6 +13,9 @@ public class MapWorld extends World
     // via MapWorld.variable
     private static ArrayList<Country> countries;
     
+    // Only exists to get a reference to the world
+    private static TextLabel world_ref;
+    
     // Stage 1 stuff
     private static ArrayList<ImageButton> building_buttons;
     private static ArrayList<TextLabel> building_labels;
@@ -20,6 +23,7 @@ public class MapWorld extends World
     private static String selected_building = "silo";
     
     private static GameState game_state;
+   
     
     /**
      * Constructor for objects of class MapWorld.
@@ -92,6 +96,10 @@ public class MapWorld extends World
         
         //TODO REMOVE THIS
         game_state.createHumanPlayer("Brazil");
+    }
+    
+    public static World getWorldObj() {
+        
     }
     
     public void act() {
