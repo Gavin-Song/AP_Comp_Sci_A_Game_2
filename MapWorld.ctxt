@@ -4,17 +4,17 @@ comment1.params=
 comment1.target=MapWorld()
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MapWorld.\n\ \n
 comment2.params=
-comment2.target=void\ act()
-<<<<<<< HEAD
-comment3.params=mouse
-comment3.target=void\ handleStage0Click(greenfoot.MouseInfo)
-comment4.params=
-comment4.target=void\ updateAllLabels()
+comment2.target=greenfoot.World\ getWorldObj()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=mouse
+comment4.target=void\ handleStage0Click(greenfoot.MouseInfo)
 comment5.params=
-comment5.target=java.util.ArrayList\ getCountries()
+comment5.target=void\ updateAllLabels()
 comment6.params=
-comment6.target=GameState\ getGameState()
-numComments=7
-=======
-numComments=3
->>>>>>> title-screen
+comment6.target=void\ removeStage0LabelsAndButtons()
+comment7.params=
+comment7.target=java.util.ArrayList\ getCountries()
+comment8.params=
+comment8.target=GameState\ getGameState()
+numComments=9
