@@ -35,18 +35,19 @@ public class MapWorld extends World
         game_state = new GameState();
 
         // Add all the countries. Do not touch
+        // Please indent when adding cities to avoid confusion and make sure to use real city names (location doesn't matter)
         countries = new ArrayList<Country>();
         countries.add(new Country("UFNAC", "", new Color(0, 108, 255)));
         countries.add(new Country("Eastern-European Union", "", new Color(176, 104, 0)));
         countries.add(new Country("Second Soviet Union", "", new Color(255, 150, 0)));
         countries.add(new Country("Greater Asian Coalition", "", new Color(255, 0, 0)));
         countries.add(new Country("Brazil", "", new Color(0, 255, 42)));
-        countries.get(4).getCities().add(new City("Rio de Janiero", 6320000, countries.get(4), 371,411));
-        countries.get(4).getCities().add(new City("Sao Paulo", 12000000, countries.get(4), 425,493));
-        countries.get(4).getCities().add(new City("Salvador", 2700000, countries.get(4), 461,541));
-        addObject(countries.get(4).getCities().get(0), 371,411);
-        addObject(countries.get(4).getCities().get(1), 425,493);
-        addObject(countries.get(4).getCities().get(2), 461,541);
+            countries.get(4).getCities().add(new City("Rio de Janiero", 6320000, countries.get(4), 371,411));
+            addObject(countries.get(4).getCities().get(0), 371,411);
+            countries.get(4).getCities().add(new City("Sao Paulo", 12000000, countries.get(4), 425,493));
+            addObject(countries.get(4).getCities().get(1), 425,493);
+            countries.get(4).getCities().add(new City("Salvador", 2700000, countries.get(4), 461,541));
+            addObject(countries.get(4).getCities().get(2), 461,541);
         countries.add(new Country("Arabian Empire", "", new Color(252, 255, 0)));
         
         /* Hack: we're adding countries but making them 1x1 pixels to not display them
@@ -92,6 +93,11 @@ public class MapWorld extends World
         
         //TODO REMOVE THIS
         game_state.createHumanPlayer("Brazil");
+        game_state.createAIPlayers("Brazil");
+        for(AIPlayer ai : game_state.getAIPlayers())
+        {
+            ai.placeBuildings();
+        }
     }
     
     public void act() {

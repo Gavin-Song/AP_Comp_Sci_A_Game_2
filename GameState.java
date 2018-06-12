@@ -42,4 +42,16 @@ public class GameState
             }
         }
     }
+    
+    public void createAIPlayers(String country_name) {
+        for (Country country: MapWorld.getCountries()) {
+            if(!country.getName().equals(country_name))
+                ai_players.add(new AIPlayer(country, 0));
+        }
+    }
+    
+    public ArrayList<AIPlayer> getAIPlayers()
+    {
+        return(ai_players);
+    }
 }
