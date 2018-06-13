@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Factory extends Building
+public abstract class Factory extends Building
 {
     private static int FACTORY_WIDTH = 100;
     private static int FACTORY_HEIGHT = 100;
@@ -16,12 +16,5 @@ public class Factory extends Building
         this.getImage().scale(FACTORY_WIDTH, FACTORY_HEIGHT);
     }
     
-    /**
-     * Act - do whatever the Factory wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    //public abstract void spawnUnit(String type, int x, int y);
 }

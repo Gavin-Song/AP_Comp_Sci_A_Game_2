@@ -11,6 +11,9 @@ public class Country extends Actor
 {
     private ArrayList<City> cities;
     private ArrayList<MobileUnit> units;
+    private ArrayList<Silo> silos;
+    private ArrayList<Radar> radars;
+    private ArrayList<Factory> factories;
     
     private String name;
     private String flag;
@@ -71,5 +74,22 @@ public class Country extends Actor
     
     public String getName() {
         return this.name;
+    }
+    
+    /**
+     * Returns the most strategic target in the country
+     * as an int[]  { x, y }
+     * 
+     * Strategic targets are ranked as follows:
+     * > Silos
+     * > City with largest population, if population > 100K
+     * > Production facilities
+     * > Cities with population < 100K
+     */
+    public int[] getStrategicTarget() {
+        int[] returned = {0, 0};
+        
+        
+        return returned;
     }
 }

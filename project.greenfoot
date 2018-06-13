@@ -1,5 +1,9 @@
 #Greenfoot properties
+<<<<<<< HEAD
 #Wed Jun 13 08:27:47 EDT 2018
+=======
+#Wed Jun 13 08:17:20 EDT 2018
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target16.name=Battleship
 class.Factory.superclass=Building
 dependency35.to=TextLabel
@@ -22,26 +26,35 @@ dependency8.to=Country
 class.ProductionFacility.image=igloo.png
 target14.type=ClassTarget
 dependency25.type=UsesDependency
+<<<<<<< HEAD
 dependency22.from=MapWorld
+=======
+dependency22.from=Player
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target15.width=80
 class.Button.superclass=GUI
 class.MapWorld.superclass=greenfoot.World
 dependency29.from=MapWorld
 target15.height=50
 target7.type=ClassTarget
-target32.name=Tank
+target32.name=Infantry
 target15.typeParameters=
 target11.width=110
 target21.type=ClassTarget
-dependency25.to=ImageButton
+dependency25.to=GameState
 dependency32.type=UsesDependency
 target28.type=ClassTarget
 target1.typeParameters=
 dependency39.type=UsesDependency
-dependency36.from=Submarine
+dependency36.from=GameState
 target20.showInterface=false
 dependency2.to=Country
+<<<<<<< HEAD
 dependency46.to=Config
+=======
+target6.naviview.expanded=true
+dependency46.to=MobileUnit
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 class.Silo.superclass=Building
 target30.type=ClassTarget
 dependency1.type=UsesDependency
@@ -51,7 +64,13 @@ target16.x=0
 target37.type=ClassTarget
 target30.typeParameters=
 dependency8.type=UsesDependency
+<<<<<<< HEAD
 dependency5.from=NavalFactory
+=======
+dependency5.from=Factory
+dependency48.type=UsesDependency
+dependency45.from=Country
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target32.height=50
 dependency45.from=Country
 target24.height=50
@@ -63,9 +82,16 @@ target27.showInterface=false
 target18.width=80
 editor.fx.0.height=722
 project.charset=UTF-8
+<<<<<<< HEAD
 dependency40.to=MapWorld
 target12.typeParameters=
 dependency15.to=AirFactory
+=======
+dependency40.to=TextLabel
+target12.typeParameters=
+dependency15.to=Country
+target15.name=LandUnit
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target5.height=50
 target15.name=LandUnit
 target1.name=Bomber
@@ -73,17 +99,21 @@ version=3.0.0
 target8.name=NavalFactory
 class.Cruiser.superclass=NavalUnit
 class.GUI.superclass=greenfoot.Actor
-dependency36.to=Country
+dependency36.to=ImageButton
 target22.name=BuildingFactory
 class.Building.image=house-02.png
 dependency10.type=UsesDependency
-target29.name=GameState
+target29.name=Submarine
 dependency17.type=UsesDependency
 dependency14.from=BuildingFactory
 target37.y=0
 target37.x=0
+<<<<<<< HEAD
 target33.height=50
 package.numTargets=38
+=======
+package.numTargets=36
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 class.Scout.superclass=AirUnit
 target26.showInterface=false
 class.Player.superclass=
@@ -91,15 +121,19 @@ target33.y=0
 target33.x=0
 target13.type=ClassTarget
 dependency24.type=UsesDependency
-dependency21.from=Player
+dependency21.from=ProductionFacility
 class.MenuButton.superclass=Button
 target30.width=90
 class.MapWorld.image=Map.png
 dependency28.from=MapWorld
+<<<<<<< HEAD
+=======
+target30.width=80
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 dependency9.to=Country
 target24.typeParameters=
-target6.type=ClassTarget
-target31.name=City
+target6.type=AbstractTarget
+target31.name=Cruiser
 target27.height=50
 target19.height=50
 dependency30.to=Country
@@ -117,24 +151,43 @@ target3.x=0
 >>>>>>>=5a0b203e0833cd9c71b0d432c5df755ccf9e40ab
 target7.typeParameters=
 class.TextLabel.superclass=GUI
+<<<<<<< HEAD
 target8.height=50
 target25.showInterface=false
 dependency26.to=Button
+=======
+target25.showInterface=false
+dependency26.to=ImageButton
+target8.height=50
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 class.City.superclass=greenfoot.Actor
 class.Config.superclass=
 mainWindow.y=23
 mainWindow.x=0
+<<<<<<< HEAD
 target3.showInterface=false
 target12.showInterface=false
 target17.typeParameters=
 class.InvisibleButton.image=blue-draught.png
 dependency3.to=Country
 dependency47.to=Country
+=======
+target12.showInterface=false
+target3.showInterface=false
+target17.typeParameters=
+class.InvisibleButton.image=blue-draught.png
+dependency3.to=Country
+dependency47.to=Config
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target1.width=80
 dependency40.type=UsesDependency
 target36.type=ClassTarget
 dependency7.type=UsesDependency
+<<<<<<< HEAD
 dependency4.from=Factory
+=======
+dependency4.from=LandFactory
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 dependency47.type=UsesDependency
 dependency44.from=Country
 target36.typeParameters=
@@ -143,6 +196,7 @@ target28.height=50
 target37.width=80
 target26.y=0
 target26.x=0
+<<<<<<< HEAD
 dependency20.to=Country
 target22.y=0
 target22.x=0
@@ -158,16 +212,38 @@ target29.typeParameters=
 target21.name=AirFactory
 target28.name=HumanFactory
 dependency13.from=BuildingFactory
+=======
+dependency20.to=Silo
+target22.y=0
+target22.x=0
+target33.width=130
+target14.name=GUI
+target9.height=50
+target11.showInterface=false
+target2.showInterface=false
+target7.name=MenuButton
+dependency41.to=MapWorld
+dependency16.to=AirFactory
+target29.typeParameters=
+target21.name=AirFactory
+target28.name=GameState
+dependency13.from=AirFactory
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 dependency16.type=UsesDependency
 target14.typeParameters=
 dependency37.to=Country
 target8.width=100
 target22.width=120
+<<<<<<< HEAD
 target21.height=50
 target12.type=ClassTarget
+=======
+target12.type=ClassTarget
+target21.height=50
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target13.height=50
 dependency23.type=UsesDependency
-dependency20.from=ProductionFacility
+dependency20.from=BuildingFactory
 target19.type=ClassTarget
 target4.width=80
 target33.typeParameters=
@@ -178,15 +254,19 @@ target10.showInterface=false
 target1.showInterface=false
 class.Infantry.superclass=LandUnit
 target5.type=ClassTarget
-target30.name=Submarine
+target30.name=City
 dependency10.to=Country
 class.MenuButton.image=red-draught.png
+<<<<<<< HEAD
 target37.name=Country
 target19.y=0
+=======
+target19.y=0
+target37.name=NavalUnit
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target19.x=0
 class.BuildingFactory.superclass=
 dependency30.type=UsesDependency
-class.HumanFactory.superclass=Factory
 target26.type=ClassTarget
 target2.height=50
 dependency37.type=UsesDependency
@@ -194,7 +274,11 @@ dependency34.from=GameState
 target15.y=0
 target15.x=0
 dependency31.to=HumanPlayer
+<<<<<<< HEAD
 target36.width=90
+=======
+target36.width=80
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target33.showInterface=false
 target11.y=0
 target11.x=0
@@ -202,8 +286,12 @@ readme.height=58
 target26.typeParameters=
 target32.width=80
 target8.showInterface=false
+<<<<<<< HEAD
 target17.showInterface=false
 dependency27.to=TextLabel
+=======
+dependency27.to=Button
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target30.height=50
 target29.width=90
 target35.type=ClassTarget
@@ -214,6 +302,7 @@ dependency43.from=Country
 dependency46.type=UsesDependency
 dependency4.to=Country
 target9.typeParameters=
+dependency48.to=Country
 target25.width=80
 target16.height=50
 target32.showInterface=false
@@ -234,11 +323,20 @@ target20.name=AIPlayer
 target27.name=HumanPlayer
 class.Country.image=button-red.png
 dependency15.type=UsesDependency
+<<<<<<< HEAD
 dependency42.to=City
 dependency12.from=AirFactory
 target14.width=80
 target23.typeParameters=
 dependency17.to=Building
+=======
+dependency42.to=Country
+dependency12.from=AIPlayer
+target14.width=80
+target23.typeParameters=
+dependency17.to=NavalFactory
+dependency19.from=BuildingFactory
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target6.y=0
 dependency19.from=BuildingFactory
 target6.x=0
@@ -257,18 +355,26 @@ dependency29.type=UsesDependency
 dependency26.from=MapWorld
 class.Submarine.superclass=NavalUnit
 target4.type=ClassTarget
-target36.name=MilitaryUnit
+target36.name=NavalUnit
 class.WorldMap.image=Map.png
-target28.width=110
+target28.width=90
 target25.type=ClassTarget
 dependency33.from=GameState
+<<<<<<< HEAD
 editor.fx.0.y=23
 dependency36.type=UsesDependency
 class.Battleship.superclass=NavalUnit
 editor.fx.0.x=501
 dependency11.to=Config
+=======
+editor.fx.0.y=110
+dependency36.type=UsesDependency
+class.Battleship.superclass=NavalUnit
+editor.fx.0.x=560
+dependency11.to=Country
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target6.height=50
-editor.fx.0.width=1267
+editor.fx.0.width=800
 class.HumanPlayer.superclass=Player
 target29.y=0
 target29.x=0
@@ -284,6 +390,7 @@ target21.x=0
 target20.typeParameters=
 class.AirFactory.superclass=Factory
 target34.height=50
+<<<<<<< HEAD
 target34.type=ClassTarget
 class.Tank.superclass=LandUnit
 dependency5.type=UsesDependency
@@ -293,6 +400,18 @@ dependency45.type=UsesDependency
 dependency42.from=Country
 dependency9.from=Silo
 class.Cruiser.image=boat02-f.png
+=======
+dependency2.from=Building
+dependency5.type=UsesDependency
+class.Tank.superclass=LandUnit
+target34.type=ClassTarget
+dependency42.from=MilitaryUnit
+dependency45.type=UsesDependency
+target17.width=80
+dependency9.from=AirUnit
+class.Cruiser.image=boat02-f.png
+dependency28.to=TextLabel
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target10.height=50
 dependency28.to=City
 class.Country.superclass=greenfoot.Actor
@@ -305,6 +424,10 @@ target19.name=Scout
 target13.typeParameters=
 target5.name=LandFactory
 target24.showInterface=false
+<<<<<<< HEAD
+=======
+dependency22.to=Country
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 class.Radar.superclass=Building
 dependency22.to=Config
 target26.name=MapWorld
@@ -316,9 +439,17 @@ dependency18.from=BuildingFactory
 target18.x=0
 dependency43.to=Building
 target14.y=0
+<<<<<<< HEAD
 target14.x=0
 target10.type=AbstractTarget
 dependency18.to=Radar
+=======
+dependency43.to=City
+target10.type=AbstractTarget
+target14.x=0
+dependency18.to=Building
+package.numDependencies=48
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 dependency21.type=UsesDependency
 package.numDependencies=47
 target17.type=ClassTarget
@@ -330,23 +461,36 @@ target10.y=0
 target3.type=AbstractTarget
 target10.x=0
 target23.showInterface=false
+<<<<<<< HEAD
 target35.name=TitleScreenWorld
 dependency39.to=TextLabel
+=======
+target35.name=Country
+dependency39.to=Country
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target25.typeParameters=
 target24.type=AbstractTarget
 readme.name=@README
 dependency35.type=UsesDependency
+<<<<<<< HEAD
 dependency32.from=GameState
 target16.width=90
 dependency39.from=TitleScreenWorld
 class.MobileUnit.superclass=MilitaryUnit
 target10.typeParameters=
+=======
+dependency39.from=Cruiser
+class.MobileUnit.superclass=MilitaryUnit
+target10.typeParameters=
+dependency12.to=Config
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target8.typeParameters=
 dependency12.to=Country
 class.ProductionFacility.superclass=Building
 target35.y=0
 class.TitleScreenWorld.superclass=greenfoot.World
 target35.x=0
+<<<<<<< HEAD
 target33.type=ClassTarget
 target22.showInterface=false
 dependency4.type=UsesDependency
@@ -355,6 +499,13 @@ dependency44.type=UsesDependency
 dependency41.from=MilitaryUnit
 dependency33.to=Country
 dependency8.from=AirUnit
+=======
+dependency33.to=Country
+dependency41.from=TitleScreenWorld
+dependency44.type=UsesDependency
+dependency8.from=Destroyer
+dependency48.from=NavalUnit
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 class.Destroyer.image=boat01-f.png
 target31.y=0
 target31.x=0
@@ -364,7 +515,11 @@ class.AirUnit.superclass=MobileUnit
 target9.y=0
 target9.x=0
 class.Radar.image=pik.png
+<<<<<<< HEAD
 dependency29.to=AIPlayer
+=======
+dependency29.to=City
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target11.name=InvisibleButton
 target5.y=0
 target5.x=0
@@ -378,6 +533,11 @@ target19.typeParameters=
 target1.x=0
 target29.showInterface=false
 target25.name=TextLabel
+<<<<<<< HEAD
+=======
+dependency10.from=Silo
+dependency13.type=UsesDependency
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target5.typeParameters=
 dependency13.type=UsesDependency
 dependency10.from=AIPlayer
@@ -385,6 +545,10 @@ target7.showInterface=false
 target3.width=90
 dependency17.from=BuildingFactory
 class.Bomber.image=airplane.png
+<<<<<<< HEAD
+=======
+dependency23.to=Config
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target31.height=50
 dependency23.to=Country
 target23.height=50
@@ -397,6 +561,7 @@ dependency27.type=UsesDependency
 dependency24.from=MapWorld
 target2.type=ClassTarget
 class.InvisibleButton.superclass=Button
+<<<<<<< HEAD
 target24.y=0
 dependency44.to=BuildingFactory
 target9.type=ClassTarget
@@ -404,6 +569,15 @@ target35.width=130
 target24.x=0
 target34.name=Infantry
 dependency19.to=Silo
+=======
+dependency44.to=Building
+target24.y=0
+target24.x=0
+target35.width=80
+target9.type=ClassTarget
+dependency19.to=Radar
+target34.name=MilitaryUnit
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target34.typeParameters=
 target28.showInterface=false
 target4.height=50
@@ -411,10 +585,17 @@ class.TitleScreenWorld.image=Map.png
 target23.type=ClassTarget
 target20.y=0
 target20.x=0
+<<<<<<< HEAD
 dependency34.type=UsesDependency
 dependency31.from=GameState
 target6.showInterface=false
 target15.showInterface=false
+=======
+target8.naviview.expanded=true
+target15.showInterface=false
+target6.showInterface=false
+dependency38.from=City
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target31.width=80
 dependency38.from=Cruiser
 readme.y=10
@@ -422,23 +603,41 @@ readme.x=10
 target16.typeParameters=
 class.NavalUnit.superclass=MobileUnit
 target2.typeParameters=
+<<<<<<< HEAD
 dependency13.to=Factory
+=======
+dependency13.to=Country
+dependency3.type=UsesDependency
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target32.type=ClassTarget
 dependency3.type=UsesDependency
 target30.showInterface=false
+<<<<<<< HEAD
 dependency43.type=UsesDependency
 dependency40.from=TitleScreenWorld
 dependency7.from=Destroyer
 target6.width=80
 dependency47.from=NavalUnit
+=======
+dependency40.from=TitleScreenWorld
+dependency43.type=UsesDependency
+dependency7.from=Radar
+target6.width=80
+dependency47.from=Country
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 readme.width=47
 target20.width=80
 mainWindow.height=984
 target5.showInterface=false
 target14.showInterface=false
 target26.height=50
-target18.height=50
 dependency34.to=MapWorld
+target18.height=50
+<<<<<<< HEAD
+dependency34.to=MapWorld
+=======
+class.AirFactory.image=house-04.png
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target2.width=80
 class.AirFactory.image=house-04.png
 target10.name=Button
@@ -453,7 +652,7 @@ target7.height=50
 target13.y=0
 target13.x=0
 target37.showInterface=false
-target34.width=80
+target34.width=90
 target24.name=Player
 dependency7.to=Country
 dependency12.type=UsesDependency
@@ -468,11 +667,20 @@ target15.type=ClassTarget
 dependency23.from=MapWorld
 dependency26.type=UsesDependency
 target11.height=50
+<<<<<<< HEAD
 dependency24.to=GameState
 target1.type=ClassTarget
 target9.width=100
 target8.type=ClassTarget
 target33.name=Cruiser
+=======
+target1.type=ClassTarget
+dependency24.to=Country
+target9.width=100
+target8.type=ClassTarget
+target33.name=TitleScreenWorld
+target23.width=130
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target38.y=0
 target23.width=130
 target38.x=0
@@ -480,13 +688,26 @@ target36.showInterface=false
 target22.type=ClassTarget
 dependency1.to=Country
 class.NavalFactory.superclass=Factory
+<<<<<<< HEAD
+=======
+dependency30.from=HumanPlayer
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 dependency33.type=UsesDependency
 dependency30.from=HumanPlayer
 target29.type=ClassTarget
+<<<<<<< HEAD
 target5.width=100
 target34.y=0
 class.Bomber.superclass=AirUnit
 dependency45.to=MobileUnit
+=======
+dependency45.to=BuildingFactory
+class.Bomber.superclass=AirUnit
+target34.y=0
+target5.width=100
+class.NavalFactory.image=house-05.png
+dependency37.from=Submarine
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target34.x=0
 dependency37.from=City
 class.NavalFactory.image=house-05.png
@@ -505,6 +726,12 @@ target4.x=0
 dependency42.type=UsesDependency
 class.Building.superclass=MilitaryUnit
 target20.height=50
+<<<<<<< HEAD
+=======
+target12.height=50
+dependency6.from=NavalFactory
+dependency9.type=UsesDependency
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target38.type=ClassTarget
 dependency9.type=UsesDependency
 dependency6.from=Radar
@@ -513,8 +740,12 @@ target35.showInterface=false
 dependency46.from=Country
 target21.typeParameters=
 world.lastInstantiated=MapWorld
+<<<<<<< HEAD
 class.City.image=castle.png
 dependency14.to=Country
+=======
+dependency14.to=Factory
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
 target18.typeParameters=
 class.Fighter.superclass=AirUnit
 target38.height=50

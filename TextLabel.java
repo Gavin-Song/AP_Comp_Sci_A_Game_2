@@ -21,6 +21,7 @@ public class TextLabel extends GUI
         this.image = this.getImage();
     }
     
+<<<<<<< HEAD
     //String text;
     public TextLabel(String a)
     {
@@ -35,6 +36,8 @@ public class TextLabel extends GUI
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     //>>>>>>> title-screen
+=======
+>>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
     public void act() 
     {
         GreenfootImage img = new GreenfootImage(image);
