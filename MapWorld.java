@@ -164,4 +164,16 @@ public class MapWorld extends World
     public static GameState getGameState() {
         return game_state;      
     }
+    
+    public Country getCountryByName(String name)
+    {
+        for(Country x: countries)
+        {
+            if(x.getName().equals(name))
+            {
+                return(x);
+            }
+        }
+        return(null);
+    }
 }
