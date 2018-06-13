@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Factory extends Building
+public abstract class Factory extends Building
 {
     private static int FACTORY_WIDTH = 100;
     private static int FACTORY_HEIGHT = 100;
@@ -15,4 +15,6 @@ public class Factory extends Building
         super(country,hp);
         this.getImage().scale(FACTORY_WIDTH, FACTORY_HEIGHT);
     }
+    
+    //public abstract void spawnUnit(String type, int x, int y);
 }
