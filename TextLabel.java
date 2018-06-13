@@ -2,7 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class TextLabel extends GUI
 {
+<<<<<<< HEAD
     //<<<<<<< HEAD
+=======
+>>>>>>> 5a0b203e0833cd9c71b0d432c5df755ccf9e40ab
     private String text;
     private int h;
     private Font font;
@@ -22,6 +25,7 @@ public class TextLabel extends GUI
         this.image = this.getImage();
     }
     
+<<<<<<< HEAD
     //=======
     String text;
     public TextLabel(String a)
@@ -37,6 +41,8 @@ public class TextLabel extends GUI
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     //>>>>>>> title-screen
+=======
+>>>>>>> 5a0b203e0833cd9c71b0d432c5df755ccf9e40ab
     public void act() 
     {
         GreenfootImage img = new GreenfootImage(image);

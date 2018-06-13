@@ -10,6 +10,7 @@ public class NavalFactory extends Factory
 {
     public NavalFactory(Country country, int hp){
         super(country,hp);
+        getImage().scale(25,25);
     }
     /**
      * Act - do whatever the NavalFactory wants to do. This method is called whenever

@@ -17,9 +17,14 @@ public class MapWorld extends World
     private static String selected_building = "silo";
     
     private static GameState game_state;
+<<<<<<< HEAD
   
     int frames = 0;
     
+=======
+    int frames = 0;
+
+>>>>>>> 5a0b203e0833cd9c71b0d432c5df755ccf9e40ab
     /**
      * Constructor for objects of class MapWorld.
      * 
@@ -31,20 +36,24 @@ public class MapWorld extends World
 
         // Create a game state
         game_state = new GameState();
+        
+        world_ref = new TextLabel("", 1);
+        addObject(world_ref, -100, -100);
 
         // Add all the countries. Do not touch
+        // Please indent when adding cities to avoid confusion and make sure to use real city names (location doesn't matter)
         countries = new ArrayList<Country>();
         countries.add(new Country("UFNAC", "", new Color(0, 108, 255)));
         countries.add(new Country("Eastern-European Union", "", new Color(176, 104, 0)));
         countries.add(new Country("Second Soviet Union", "", new Color(255, 150, 0)));
         countries.add(new Country("Greater Asian Coalition", "", new Color(255, 0, 0)));
         countries.add(new Country("Brazil", "", new Color(0, 255, 42)));
-        countries.get(4).getCities().add(new City("Rio de Janiero", 6320000, countries.get(4), 371,411));
-        countries.get(4).getCities().add(new City("Sao Paulo", 12000000, countries.get(4), 425,493));
-        countries.get(4).getCities().add(new City("Salvador", 2700000, countries.get(4), 461,541));
-        addObject(countries.get(4).getCities().get(0), 371,411);
-        addObject(countries.get(4).getCities().get(1), 425,493);
-        addObject(countries.get(4).getCities().get(2), 461,541);
+            countries.get(4).getCities().add(new City("Rio de Janiero", 6320000, countries.get(4), 371,411));
+            addObject(countries.get(4).getCities().get(0), 371,411);
+            countries.get(4).getCities().add(new City("Sao Paulo", 12000000, countries.get(4), 425,493));
+            addObject(countries.get(4).getCities().get(1), 425,493);
+            countries.get(4).getCities().add(new City("Salvador", 2700000, countries.get(4), 461,541));
+            addObject(countries.get(4).getCities().get(2), 461,541);
         countries.add(new Country("Arabian Empire", "", new Color(252, 255, 0)));
         
         /* Hack: we're adding countries but making them 1x1 pixels to not display them
@@ -90,10 +99,15 @@ public class MapWorld extends World
         
         //TODO REMOVE THIS
         game_state.createHumanPlayer("Brazil");
+        game_state.createAIPlayers("Brazil");
+        for(AIPlayer ai : game_state.getAIPlayers())
+        {
+            ai.placeBuildings();
+        }
     }
     
     public static World getWorldObj() {
-        
+        return world_ref.getWorld();
     }
     
     public void act() {
@@ -131,12 +145,12 @@ public class MapWorld extends World
                 break;
             }
         }
-        
-        this.updateAllLabels();
+ 
         game_state.getHumanPlayer().getCountry().addBuilding(selected_building, mouse.getX(), mouse.getY()); 
+        this.updateAllLabels();
     }
     
-    public void updateAllLabels() {
+    private void updateAllLabels() {
         building_labels.get(0).updateText(String.valueOf(game_state.getHumanPlayer().getCountry().getBuildingCount().get("naval")));
         building_labels.get(1).updateText(String.valueOf(game_state.getHumanPlayer().getCountry().getBuildingCount().get("air")));
         building_labels.get(2).updateText(String.valueOf(game_state.getHumanPlayer().getCountry().getBuildingCount().get("radar")));
@@ -144,9 +158,21 @@ public class MapWorld extends World
         selected_building_label.updateText("Selected: " + selected_building.substring(0, 1).toUpperCase() + selected_building.substring(1));
     }
     
+    public static void removeStage0LabelsAndButtons() {
+        World world = getWorldObj();
+        for (TextLabel label: building_labels) {
+            world.removeObject(label);
+        }
+        for (ImageButton button: building_buttons) {
+            world.removeObject(button);
+        }
+        world.removeObject(selected_building_label);
+    }
+    
     public static ArrayList<Country> getCountries() {
         return countries;
     }
+<<<<<<< HEAD
    
     public Country getCountryByName(String name)
     {
@@ -155,5 +181,10 @@ public class MapWorld extends World
             if(x.getName().equals(name))
             return(x);
         }
+=======
+    
+    public static GameState getGameState() {
+        return game_state;      
+>>>>>>> 5a0b203e0833cd9c71b0d432c5df755ccf9e40ab
     }
 }

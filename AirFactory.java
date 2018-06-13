@@ -10,6 +10,7 @@ public class AirFactory extends Factory
 {
     public AirFactory(Country country, int hp){
         super(country,hp);
+        getImage().scale(25,25);
     }
     /**
      * Act - do whatever the AirFactory wants to do. This method is called whenever

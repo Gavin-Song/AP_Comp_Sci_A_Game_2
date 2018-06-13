@@ -30,14 +30,7 @@ public class GameState
     public void advanceStage() {
         if (this.stage == 0) {
             // Remove building buttons from world
-            World world = MapWorld.selected_building_label.getWorld();
-            for (TextLabel label: MapWorld.selected_building_label) {
-                world.removeObject(label);
-            }
-            for (ImageButton button: building_buttons) {
-                world.removeObject(building_buttons);
-            }
-            world.removeObject(selected_building_label);
+            MapWorld.removeStage0LabelsAndButtons();
         }
         this.stage++;
     }
@@ -53,5 +46,17 @@ public class GameState
                 break;
             }
         }
+    }
+    
+    public void createAIPlayers(String country_name) {
+        for (Country country: MapWorld.getCountries()) {
+            if(!country.getName().equals(country_name))
+                ai_players.add(new AIPlayer(country, 0));
+        }
+    }
+    
+    public ArrayList<AIPlayer> getAIPlayers()
+    {
+        return(ai_players);
     }
 }
