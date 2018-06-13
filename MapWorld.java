@@ -17,13 +17,8 @@ public class MapWorld extends World
     private static String selected_building = "silo";
     
     private static GameState game_state;
-<<<<<<< HEAD
-  
-    int frames = 0;
-=======
     private int frames = 0;
 
->>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
     /**
      * Constructor for objects of class MapWorld.
      * 
@@ -40,10 +35,7 @@ public class MapWorld extends World
         addObject(world_ref, -100, -100);
 
         // Add all the countries. Do not touch
-<<<<<<< HEAD
         // Please indent when adding cities to avoid confusion and try to use real city names (location doesn't matter)
-=======
->>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
         countries = new ArrayList<Country>();
         countries.add(new Country("UFNAC", "", new Color(0, 108, 255)));
             countries.get(0).getCities().add(new City("NYC", 8538000, countries.get(0), 338,259));
@@ -106,16 +98,12 @@ public class MapWorld extends World
         
         
         //TODO REMOVE THIS
-<<<<<<< HEAD
         game_state.createHumanPlayer("UFNAC");
         game_state.createAIPlayers("UFNAC");
         for(AIPlayer ai : game_state.getAIPlayers())
         {
             ai.placeBuildings();
         }
-=======
-        game_state.createHumanPlayer("Brazil");
->>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
     }
     
     public static World getWorldObj() {
@@ -184,34 +172,18 @@ public class MapWorld extends World
     public static ArrayList<Country> getCountries() {
         return countries;
     }
-<<<<<<< HEAD
-   
-=======
     
     public static GameState getGameState() {
         return game_state;      
     }
     
->>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
     public Country getCountryByName(String name)
     {
         for(Country x: countries)
         {
             if(x.getName().equals(name))
-<<<<<<< HEAD
                 return(x);
         }
         return(null);
-    }
-    
-    public static GameState getGameState() {
-        return game_state;      
-=======
-            {
-                return(x);
-            }
-        }
-        return(null);
->>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
     }
 }

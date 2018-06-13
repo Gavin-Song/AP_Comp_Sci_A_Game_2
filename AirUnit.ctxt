@@ -1,11 +1,6 @@
 #BlueJ class context
 comment0.target=AirUnit
-comment0.text=\n\ Write\ a\ description\ of\ class\ AirUnit\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-<<<<<<< HEAD
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ AirUnit\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=country\ hp
 comment1.target=AirUnit(Country,\ int)
-=======
-comment1.params=country
-comment1.target=AirUnit(Country)
->>>>>>> title-screen
 numComments=2

@@ -20,24 +20,7 @@ public class TextLabel extends GUI
         this.font = new Font(h / 2);
         this.image = this.getImage();
     }
-    
-<<<<<<< HEAD
-    //String text;
-    public TextLabel(String a)
-    {
-        text = a;
-    }
-    public void displayText()
-    {
-        getImage().drawString(text, 70, getImage().getHeight() / 2);
-    }
-    /**
-     * Act - do whatever the TextLabel wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    //>>>>>>> title-screen
-=======
->>>>>>> c80fd5e853118020dc12523091483e42fbd96b5f
+
     public void act() 
     {
         GreenfootImage img = new GreenfootImage(image);
