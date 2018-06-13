@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=BuildingFactory
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ BuildingFactory\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=BuildingFactory()
-comment2.params=type\ country\ hp
-comment2.target=Building\ getBuilding(java.lang.String,\ Country,\ int)
-numComments=3
