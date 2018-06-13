@@ -8,16 +8,41 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Silo extends Building
 {
+    private int missile_count = Config.SILO_MISSILE_COUNT;
+    private int reload_counter = 0; // When it's 0 it can fire another missile
+    
     public Silo(Country country, int hp){
-        super(country,hp);
+        super(country, hp);
         getImage().scale(25,25);
     }
-    /**
-     * Act - do whatever the Silo wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    
+    public void act() {
+        this.reload_counter--;
+        if (this.reload_counter < 0)
+            this.reload_counter = 0;
+    }
+    
+    public void fire() {
+        if (this.missile_count > 0) {
+            Country target;
+            do {
+                target = Util.randomChoice(MapWorld.getCountries());
+            } while (target.getName().equals(this.getCountry().getName()));
+            
+            int[] target_loc = target.getStrategicTarget();
+            Missile missile = new Missile(target_loc[0], target_loc[1], this.getCountry());
+            this.getWorld().addObject(missile, this.getX(), this.getY());
+            
+            this.missile_count--;
+            this.reload_counter = Config.SILO_RELOAD_TIME;
+        }
+    }
+    
+    public int getReloadTime() {
+        return this.reload_counter;
+    }
+    
+    public int getMissileCount() {
+        return this.missile_count;
+    }
 }

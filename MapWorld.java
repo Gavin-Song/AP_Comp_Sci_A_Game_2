@@ -135,6 +135,12 @@ public class MapWorld extends World
                 }
             }
         }
+        
+        switch (game_state.getStage()) {
+            case 1: {
+                game_state.doCountryMoves();
+            }
+        }
     }
     
     public void handleStage0Click(MouseInfo mouse) {
@@ -148,6 +154,10 @@ public class MapWorld extends World
  
         game_state.getHumanPlayer().getCountry().addBuilding(selected_building, mouse.getX(), mouse.getY()); 
         this.updateAllLabels();
+        
+        if (game_state.getHumanPlayer().getCountry().noMoreBuildingsLeftToPlace()) {
+            game_state.advanceStage();
+        }
     }
     
     private void updateAllLabels() {

@@ -16,6 +16,10 @@ public abstract class Player
         this.country = country;
         this.score = score;
     }
+    
+    public void engageNuclearWar() {
+    }
+    
     public Country getCountry() {
         return country;
     }

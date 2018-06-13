@@ -55,6 +55,29 @@ public class GameState
         }
     }
     
+    public void doCountryMoves() {
+        Silo silo;
+        do {
+            silo = human_player.getCountry().getReadySilo();
+            if (silo == null || Math.random() < Config.DONT_FIRE_PROB) {
+                break;
+            }
+            silo.fire();
+        } while (true);
+        
+        silo = null;
+        
+        for (AIPlayer player: this.ai_players) {
+            do {
+                silo = player.getCountry().getReadySilo();
+                if (silo == null || Math.random() < Config.DONT_FIRE_PROB) {
+                    break;
+                }
+                silo.fire();
+            } while (true);
+        }
+    }
+    
     public ArrayList<AIPlayer> getAIPlayers()
     {
         return(ai_players);

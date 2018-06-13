@@ -14,8 +14,13 @@ public class MilitaryUnit extends Actor
         this.country = country;
         health = hp;
     }
+    
     public int getHealth()
     {
         return(health);
+    }
+    
+    public Country getCountry() {
+        return country;
     }
 }
