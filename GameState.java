@@ -20,7 +20,7 @@ public class GameState
     private ArrayList<AIPlayer> ai_players;
     
     public GameState() {
-
+        ai_players = new ArrayList<AIPlayer>();
     }
     
     public int getStage() {

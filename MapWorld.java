@@ -17,14 +17,8 @@ public class MapWorld extends World
     private static String selected_building = "silo";
     
     private static GameState game_state;
-<<<<<<< HEAD
   
     int frames = 0;
-    
-=======
-    int frames = 0;
-
->>>>>>> 5a0b203e0833cd9c71b0d432c5df755ccf9e40ab
     /**
      * Constructor for objects of class MapWorld.
      * 
@@ -41,9 +35,15 @@ public class MapWorld extends World
         addObject(world_ref, -100, -100);
 
         // Add all the countries. Do not touch
-        // Please indent when adding cities to avoid confusion and make sure to use real city names (location doesn't matter)
+        // Please indent when adding cities to avoid confusion and try to use real city names (location doesn't matter)
         countries = new ArrayList<Country>();
         countries.add(new Country("UFNAC", "", new Color(0, 108, 255)));
+            countries.get(0).getCities().add(new City("NYC", 8538000, countries.get(0), 338,259));
+            addObject(countries.get(0).getCities().get(0), 338,359);
+            countries.get(0).getCities().add(new City("Houston", 2303000, countries.get(0), 243,283));
+            addObject(countries.get(0).getCities().get(1), 243,283);
+            countries.get(0).getCities().add(new City("LA", 3976000, countries.get(0), 143,240));
+            addObject(countries.get(0).getCities().get(2), 143,240);
         countries.add(new Country("Eastern-European Union", "", new Color(176, 104, 0)));
         countries.add(new Country("Second Soviet Union", "", new Color(255, 150, 0)));
         countries.add(new Country("Greater Asian Coalition", "", new Color(255, 0, 0)));
@@ -98,8 +98,8 @@ public class MapWorld extends World
         
         
         //TODO REMOVE THIS
-        game_state.createHumanPlayer("Brazil");
-        game_state.createAIPlayers("Brazil");
+        game_state.createHumanPlayer("UFNAC");
+        game_state.createAIPlayers("UFNAC");
         for(AIPlayer ai : game_state.getAIPlayers())
         {
             ai.placeBuildings();
@@ -172,19 +172,18 @@ public class MapWorld extends World
     public static ArrayList<Country> getCountries() {
         return countries;
     }
-<<<<<<< HEAD
    
     public Country getCountryByName(String name)
     {
         for(Country x: countries)
         {
             if(x.getName().equals(name))
-            return(x);
+                return(x);
         }
-=======
+        return(null);
+    }
     
     public static GameState getGameState() {
         return game_state;      
->>>>>>> 5a0b203e0833cd9c71b0d432c5df755ccf9e40ab
     }
 }

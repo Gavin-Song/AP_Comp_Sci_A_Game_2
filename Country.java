@@ -57,6 +57,7 @@ public class Country extends Actor
         this.getWorld().addObject(to_add, x, y);
         
         building_count.put(type, (Integer)building_count.get(type) - 1);
+        System.out.println(x + "," + y);
     }
     
     public String getNonEmptyBuilding() {
