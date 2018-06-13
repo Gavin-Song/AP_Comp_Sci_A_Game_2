@@ -17,7 +17,7 @@ public class MapWorld extends World
     private static String selected_building = "silo";
     
     private static GameState game_state;
-    int frames = 0;
+    private int frames = 0;
 
     /**
      * Constructor for objects of class MapWorld.
