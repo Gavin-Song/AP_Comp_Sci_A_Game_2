@@ -1,4 +1,5 @@
 import java.util.*;
+import greenfoot.*;
 
 /**
  * Handles the current state of the game
@@ -27,6 +28,10 @@ public class GameState
     }
     
     public void advanceStage() {
+        if (this.stage == 0) {
+            // Remove building buttons from world
+            MapWorld.removeStage0LabelsAndButtons();
+        }
         this.stage++;
     }
     

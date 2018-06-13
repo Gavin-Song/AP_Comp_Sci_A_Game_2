@@ -1,8 +1,13 @@
 #BlueJ class context
 comment0.target=Radar
 comment0.text=\n\ Write\ a\ description\ of\ class\ Radar\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+<<<<<<< HEAD
 comment1.params=country\ hp
 comment1.target=Radar(Country,\ int)
+=======
+comment1.params=country
+comment1.target=Radar(Country)
+>>>>>>> title-screen
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\n\ Act\ -\ do\ whatever\ the\ Radar\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n

@@ -1,17 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
-/**
- * Write a description of class MapWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class MapWorld extends World
 {
     // Hack make variables static so we can reference them
     // via MapWorld.variable
     private static ArrayList<Country> countries;
+    
+    // Only exists to get a reference to the world
+    private static TextLabel world_ref;
     
     // Stage 1 stuff
     private static ArrayList<ImageButton> building_buttons;
@@ -20,19 +17,22 @@ public class MapWorld extends World
     private static String selected_building = "silo";
     
     private static GameState game_state;
-    
+    int frames = 0;
+
     /**
      * Constructor for objects of class MapWorld.
      * 
      */
     public MapWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1500, 806, 1); 
         getBackground().scale(Config.WORLD_WIDTH, Config.WORLD_HEIGHT);
 
         // Create a game state
         game_state = new GameState();
+        
+        world_ref = new TextLabel("", 1);
+        addObject(world_ref, -100, -100);
 
         // Add all the countries. Do not touch
         // Please indent when adding cities to avoid confusion and make sure to use real city names (location doesn't matter)
@@ -100,6 +100,10 @@ public class MapWorld extends World
         }
     }
     
+    public static World getWorldObj() {
+        return world_ref.getWorld();
+    }
+    
     public void act() {
         MouseInfo mouse = Greenfoot.getMouseInfo();   
         if (mouse != null && mouse.getButton() == 1 && Greenfoot.mouseClicked(null)) {
@@ -135,12 +139,12 @@ public class MapWorld extends World
                 break;
             }
         }
-        
-        this.updateAllLabels();
+ 
         game_state.getHumanPlayer().getCountry().addBuilding(selected_building, mouse.getX(), mouse.getY()); 
+        this.updateAllLabels();
     }
     
-    public void updateAllLabels() {
+    private void updateAllLabels() {
         building_labels.get(0).updateText(String.valueOf(game_state.getHumanPlayer().getCountry().getBuildingCount().get("naval")));
         building_labels.get(1).updateText(String.valueOf(game_state.getHumanPlayer().getCountry().getBuildingCount().get("air")));
         building_labels.get(2).updateText(String.valueOf(game_state.getHumanPlayer().getCountry().getBuildingCount().get("radar")));
@@ -148,11 +152,22 @@ public class MapWorld extends World
         selected_building_label.updateText("Selected: " + selected_building.substring(0, 1).toUpperCase() + selected_building.substring(1));
     }
     
+    public static void removeStage0LabelsAndButtons() {
+        World world = getWorldObj();
+        for (TextLabel label: building_labels) {
+            world.removeObject(label);
+        }
+        for (ImageButton button: building_buttons) {
+            world.removeObject(button);
+        }
+        world.removeObject(selected_building_label);
+    }
+    
     public static ArrayList<Country> getCountries() {
         return countries;
     }
     
     public static GameState getGameState() {
-        return game_state;
+        return game_state;      
     }
 }

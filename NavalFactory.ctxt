@@ -1,8 +1,13 @@
 #BlueJ class context
 comment0.target=NavalFactory
 comment0.text=\n\ Write\ a\ description\ of\ class\ NavalFactory\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+<<<<<<< HEAD
 comment1.params=country\ hp
 comment1.target=NavalFactory(Country,\ int)
+=======
+comment1.params=country
+comment1.target=NavalFactory(Country)
+>>>>>>> title-screen
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\n\ Act\ -\ do\ whatever\ the\ NavalFactory\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
