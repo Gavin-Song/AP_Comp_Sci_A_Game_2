@@ -18,6 +18,7 @@ public class MapWorld extends World
     
     private static GameState game_state;
     private int frames = 0;
+    private LeaderBoard leaderboard;
 
     /**
      * Constructor for objects of class MapWorld.
@@ -127,6 +128,9 @@ public class MapWorld extends World
         {
             ai.placeBuildings();
         }
+        
+        leaderboard = new LeaderBoard(150);
+        addObject(leaderboard, Config.WORLD_WIDTH - 260, 70);
         
         this.setPaintOrder(GUI.class, Explosion.class, Missile.class, City.class, MilitaryUnit.class);
     }

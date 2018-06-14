@@ -42,13 +42,33 @@ public class Missile extends MilitaryUnit
         if (targetl.size() == 0) return;
         Actor target = (Actor)targetl.get(0);
         
+        Player to_destroy;
+        try {
+            to_destroy = MapWorld.getGameState().getPlayerByCountry(((City)(target)).getCountry().getName());
+        } catch (ClassCastException e) {
+            try {
+                to_destroy = MapWorld.getGameState().getPlayerByCountry(((MilitaryUnit)(target)).getCountry().getName());
+            } catch (ClassCastException e2) {
+                return;
+            }
+        }
+        
+        Player self = MapWorld.getGameState().getPlayerByCountry(this.getCountry().getName());
+        
         if (target instanceof Factory ||
             target instanceof Radar ||
             target instanceof ProductionFacility) {
+                to_destroy.addScore(-Config.MILITARY_UNIT_VALUE);
+                self.addScore(Config.MILITARY_UNIT_VALUE);
+                
                 this.getWorld().removeObject(target);
         }
         else if (target instanceof City) {
-            ((City)target).reducePopulation((int)(Config.NUKE_POPULATION_CITY * ((City)(target)).getPopulation()));
+            int pop_damage = (int)(Config.NUKE_POPULATION_CITY * ((City)(target)).getPopulation());
+            to_destroy.addScore(-pop_damage / 1000);
+            self.addScore(pop_damage / 1000);
+            
+            ((City)target).reducePopulation(pop_damage);
         } else if (target instanceof Silo) {
             if (Math.random() < 0.2) {
                 this.getWorld().removeObject(target);

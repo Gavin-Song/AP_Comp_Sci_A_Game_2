@@ -21,6 +21,10 @@ public abstract class Player
         this.score += x;
     }
     
+    public int getScore() {
+        return score;
+    }
+    
     public Country getCountry() {
         return country;
     }
