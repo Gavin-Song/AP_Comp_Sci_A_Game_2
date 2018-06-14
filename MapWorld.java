@@ -89,10 +89,10 @@ public class MapWorld extends World
         
         // Image buttons for placing buildings
         building_buttons = new ArrayList<ImageButton>();
-        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "naval"));
-        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "air"));
-        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "radar"));
-        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "silo"));
+        building_buttons.add(new ImageButton("naval.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "naval"));
+        building_buttons.add(new ImageButton("air.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "air"));
+        building_buttons.add(new ImageButton("radar.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "radar"));
+        building_buttons.add(new ImageButton("silo.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "silo"));
  
         // Text labels for placing buildings
         building_labels = new ArrayList<TextLabel>();
@@ -127,6 +127,8 @@ public class MapWorld extends World
         {
             ai.placeBuildings();
         }
+        
+        this.setPaintOrder(GUI.class, Explosion.class, Missile.class, City.class, MilitaryUnit.class);
     }
     
     public static World getWorldObj() {

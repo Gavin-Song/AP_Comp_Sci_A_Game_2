@@ -1,9 +1,16 @@
 <<<<<<< HEAD
 #Greenfoot properties
+<<<<<<< HEAD
 #Thu Jun 14 08:02:19 EDT 2018
 target16.name=Battleship
 class.Factory.superclass=Building
 dependency35.to=TextLabel
+=======
+#Thu Jun 14 08:23:37 EDT 2018
+target16.name=Silo
+class.Factory.superclass=Building
+dependency35.to=Country
+>>>>>>> 8865c63884fefc93eb82337f5b4845cd94927222
 target37.typeParameters=
 target26.width=90
 target2.name=Building
@@ -11,7 +18,12 @@ target9.name=ImageButton
 target27.y=0
 target27.x=0
 target34.showInterface=false
+<<<<<<< HEAD
 target23.name=ProductionFacility
+=======
+target23.name=MapWorld
+class.Missile.image=missile.png
+>>>>>>> 8865c63884fefc93eb82337f5b4845cd94927222
 =======
 #Greenfoot project file
 =\=\=\=\=\=\=

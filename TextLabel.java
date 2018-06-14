@@ -14,7 +14,7 @@ public class TextLabel extends GUI
         
         image = new GreenfootImage(this.getImage());
         this.setImage(image);
-        this.getImage().scale(txt.length() * 5 + 40, h);
+        this.getImage().scale(txt.length() * 6 + 40, h);
         //etImage().setTransparency(0);
         
         this.font = new Font(h / 2);
