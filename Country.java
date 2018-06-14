@@ -79,6 +79,7 @@ public class Country extends Actor
         
         building_count.put(type, (Integer)building_count.get(type) - 1);
         this.buildings.add(to_add);
+        System.out.println(x + "," + y); 
     }
     
     public boolean noMoreBuildingsLeftToPlace() {
