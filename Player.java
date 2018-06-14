@@ -17,7 +17,8 @@ public abstract class Player
         this.score = score;
     }
     
-    public void engageNuclearWar() {
+    public void addScore(int x) {
+        this.score += x;
     }
     
     public Country getCountry() {

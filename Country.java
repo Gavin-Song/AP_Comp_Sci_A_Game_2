@@ -113,39 +113,15 @@ public class Country extends Actor
      * > Cities with population < 100K
      */
     public int[] getStrategicTarget() {
-        int[] returned = {0, 0};
-        
-        Actor optimal_target = null;
-        
-        // Silos, Factories and ProductionFacilities are targets
-        for (Building building: this.buildings) {
-            if (building instanceof Silo ||
-                building instanceof Factory ||
-                building instanceof ProductionFacility) {
-                optimal_target = building;
-                break;
-            }
-        }
-        
-        // Find cities to nuke, override nukes targetted on factories and production
-        if (optimal_target == null || !(optimal_target instanceof Silo) || Math.random() < 0.5) {    
-            for (City city: this.cities) {
-                if (optimal_target == null ||
-                        city.getPopulation() > Config.TARGET_CITY_MIN_POPULATION || 
-                        (!(optimal_target instanceof Factory) && city.getPopulation() > 0)) {
-                    optimal_target = city;
-                    break;
-                }
-            }
-        }
-        
-        // No optimal target found
-        if (optimal_target == null) {
-            return null;
-        }
-        
-        returned[0] = optimal_target.getX();
-        returned[1] = optimal_target.getY();
+        if (Math.random() < 0.5) {
+            if (this.buildings.size() == 0) return null;
+            Building r = this.buildings.get((int)(Math.random() * this.buildings.size()));
+            int[] returned = {r.getX(), r.getY()};
+            return returned;
+        } 
+        if (this.cities.size() == 0) return null;
+        City r = this.cities.get((int)(Math.random() * this.cities.size()));
+        int[] returned = {r.getX(), r.getY()};
         return returned;
     }
 }

@@ -29,12 +29,19 @@ public class Silo extends Building
                 target = Util.randomChoice(MapWorld.getCountries());
             } while (target.getName().equals(this.getCountry().getName()));
             
-            int[] target_loc = target.getStrategicTarget();
-            Missile missile = new Missile(target_loc[0], target_loc[1], this.getCountry());
-            this.getWorld().addObject(missile, this.getX(), this.getY());
-            
-            this.missile_count--;
-            this.reload_counter = Config.SILO_RELOAD_TIME;
+            try { 
+                int[] target_loc = target.getStrategicTarget();
+                if (target_loc == null)
+                    return;
+                    
+                Missile missile = new Missile(target_loc[0], target_loc[1], this.getCountry());
+                this.getWorld().addObject(missile, this.getX(), this.getY());
+                
+                this.missile_count--;
+                this.reload_counter = Config.SILO_RELOAD_TIME;
+            } catch (IllegalStateException e) {
+                return;
+            }
         }
     }
     

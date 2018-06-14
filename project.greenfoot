@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Jun 13 18:12:02 EDT 2018
+#Thu Jun 14 08:23:37 EDT 2018
 target16.name=Silo
 class.Factory.superclass=Building
 dependency35.to=Country
@@ -11,6 +11,7 @@ target27.y=0
 target27.x=0
 target34.showInterface=false
 target23.name=MapWorld
+class.Missile.image=missile.png
 dependency11.type=UsesDependency
 target23.y=0
 target23.x=0
