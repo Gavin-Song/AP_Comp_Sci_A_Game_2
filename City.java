@@ -16,6 +16,7 @@ public class City extends Actor
     
     private int x;
     private int y;
+    private TextLabel name_label;
     
     public City (String name, int population, Country country,
             int x, int y) {
@@ -25,6 +26,9 @@ public class City extends Actor
        
        this.x = MAP_X + x * MAP_SCALE;
        this.y = MAP_Y + y * MAP_SCALE;
+       
+       this.name_label = new TextLabel(this.name,30);
+       MapWorld.getWorldObj().addObject(name_label, this.x, this.y - 15);
        
        getImage().scale(25,25);
     }
@@ -36,7 +40,6 @@ public class City extends Actor
     public void reducePopulation (int deaths) {
         this.population -= deaths;
     }
-    
     
     public String getName() {
         return this.name;

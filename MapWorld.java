@@ -18,6 +18,7 @@ public class MapWorld extends World
     
     private static GameState game_state;
     private int frames = 0;
+    private LeaderBoard leaderboard;
 
     /**
      * Constructor for objects of class MapWorld.
@@ -38,24 +39,47 @@ public class MapWorld extends World
         // Please indent when adding cities to avoid confusion and try to use real city names (location doesn't matter)
         countries = new ArrayList<Country>();
         countries.add(new Country("UFNAC", "", new Color(0, 108, 255)));
-            countries.get(0).getCities().add(new City("NYC", 8538000, countries.get(0), 338,259));
-            addObject(countries.get(0).getCities().get(0), 338,359);
-            countries.get(0).getCities().add(new City("Houston", 2303000, countries.get(0), 243,283));
-            addObject(countries.get(0).getCities().get(1), 243,283);
-            countries.get(0).getCities().add(new City("LA", 3976000, countries.get(0), 143,240));
-            addObject(countries.get(0).getCities().get(2), 143,240);
+            countries.get(0).getCities().add(new City("Ottawa", 947031, countries.get(0), 219,178));
+            addObject(countries.get(0).getCities().get(0), 219,178);
+            countries.get(0).getCities().add(new City("DC", 693972, countries.get(0), 204,329));
+            addObject(countries.get(0).getCities().get(1), 204,329);
+            countries.get(0).getCities().add(new City("Mexico City", 8851000, countries.get(0), 322,267));
+            addObject(countries.get(0).getCities().get(2), 322,267);
         countries.add(new Country("Eastern-European Union", "", new Color(176, 104, 0)));
+            countries.get(1).getCities().add(new City("Nuuk", 17036, countries.get(0), 517,108));
+            addObject(countries.get(1).getCities().get(0), 517,108);
+            countries.get(1).getCities().add(new City("Berlin", 3470000, countries.get(0), 755,173));
+            addObject(countries.get(1).getCities().get(1), 755,173);
+            countries.get(1).getCities().add(new City("Kyiv", 2804000, countries.get(0), 831,189));
+            addObject(countries.get(1).getCities().get(2), 831,189);
         countries.add(new Country("Second Soviet Union", "", new Color(255, 150, 0)));
+            countries.get(2).getCities().add(new City("Moscow", 11920000, countries.get(0), 854,166));
+            addObject(countries.get(2).getCities().get(0), 854,166);
+            countries.get(2).getCities().add(new City("Astana", 814435, countries.get(0), 1011,187));
+            addObject(countries.get(2).getCities().get(1), 1011,187);
+            countries.get(2).getCities().add(new City("Krasnoyarsk", 1007000, countries.get(0), 1113,159));
+            addObject(countries.get(2).getCities().get(2), 1113,159);
         countries.add(new Country("Greater Asian Coalition", "", new Color(255, 0, 0)));
+            countries.get(3).getCities().add(new City("Beijing", 21710000, countries.get(0), 1220,249));
+            addObject(countries.get(3).getCities().get(0), 1220,249);
+            countries.get(3).getCities().add(new City("Seoul", 9860000, countries.get(0), 1282,257));
+            addObject(countries.get(3).getCities().get(1), 1282,257);
+            countries.get(3).getCities().add(new City("Tokyo", 9273000, countries.get(0), 1342,260));
+            addObject(countries.get(3).getCities().get(2), 1342,260);
         countries.add(new Country("Brazil", "", new Color(0, 255, 42)));
-        countries.get(4).getCities().add(new City("Rio de Janiero", 6320000, countries.get(4), 371,411));
-        countries.get(4).getCities().add(new City("Sao Paulo", 12000000, countries.get(4), 425,493));
-        countries.get(4).getCities().add(new City("Salvador", 2700000, countries.get(4), 461,541));
-        addObject(countries.get(4).getCities().get(0), 371,411);
-        addObject(countries.get(4).getCities().get(1), 425,493);
-        addObject(countries.get(4).getCities().get(2), 461,541);
+            countries.get(4).getCities().add(new City("Rio de Janiero", 6320000, countries.get(4), 371,411));
+            countries.get(4).getCities().add(new City("Sao Paulo", 12000000, countries.get(4), 425,493));
+            countries.get(4).getCities().add(new City("Salvador", 2700000, countries.get(4), 461,541));
+            addObject(countries.get(4).getCities().get(0), 371,411);
+            addObject(countries.get(4).getCities().get(1), 425,493);
+            addObject(countries.get(4).getCities().get(2), 461,541);
         countries.add(new Country("Arabian Empire", "", new Color(252, 255, 0)));
-        
+            countries.get(5).getCities().add(new City("Riydah", 21710000, countries.get(0), 923,309));
+            addObject(countries.get(5).getCities().get(0), 923,309);
+            countries.get(5).getCities().add(new City("Jerusalem", 9860000, countries.get(0), 866,285));
+            addObject(countries.get(5).getCities().get(1), 866,285);
+            countries.get(5).getCities().add(new City("Cairo", 9273000, countries.get(0), 841,294));
+            addObject(countries.get(5).getCities().get(2), 841,294);
         /* Hack: we're adding countries but making them 1x1 pixels to not display them
          * that way countries have access to Actor class without being an actor
          */
@@ -66,10 +90,10 @@ public class MapWorld extends World
         
         // Image buttons for placing buildings
         building_buttons = new ArrayList<ImageButton>();
-        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "naval"));
-        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "air"));
-        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "radar"));
-        building_buttons.add(new ImageButton("pik.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "silo"));
+        building_buttons.add(new ImageButton("naval.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "naval"));
+        building_buttons.add(new ImageButton("air.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "air"));
+        building_buttons.add(new ImageButton("radar.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "radar"));
+        building_buttons.add(new ImageButton("silo.png", Config.SQUARE_BUTTON_SIZE, Config.SQUARE_BUTTON_SIZE, "silo"));
  
         // Text labels for placing buildings
         building_labels = new ArrayList<TextLabel>();
@@ -94,12 +118,17 @@ public class MapWorld extends World
         selected_building_label = new TextLabel("Selected: Silo", 30);
         this.addObject(selected_building_label, (int)(Config.SQUARE_BUTTON_SIZE * 1.5 + Config.SQUARE_BUTTON_SIZE / 2), 
                 (int)(this.getHeight() - Config.SQUARE_BUTTON_SIZE * 0.35));
+     
         
+        leaderboard = new LeaderBoard(150);
+        addObject(leaderboard, Config.WORLD_WIDTH - 260, 70);
         
-        
-        //TODO REMOVE THIS
-        game_state.createHumanPlayer("UFNAC");
-        game_state.createAIPlayers("UFNAC");
+        this.setPaintOrder(GUI.class, LeaderBoard.class, Explosion.class, Missile.class, City.class, MilitaryUnit.class);
+    }
+    
+    public void createPlayers(String name) {
+        game_state.createHumanPlayer(name);
+        game_state.createAIPlayers(name);
         for(AIPlayer ai : game_state.getAIPlayers())
         {
             ai.placeBuildings();

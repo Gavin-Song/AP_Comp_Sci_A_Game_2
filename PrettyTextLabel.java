@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class TextLabel extends GUI
+public class PrettyTextLabel extends GUI
 {
     private String text;
     private int h;
@@ -8,13 +8,13 @@ public class TextLabel extends GUI
     private GreenfootImage image;
     
     //TODO make image transparnet
-    public TextLabel(String txt, int h) {
+    public PrettyTextLabel(String txt, int h) {
         this.text = txt;
         this.h = h;
         
         image = new GreenfootImage(this.getImage());
         this.setImage(image);
-        this.getImage().scale(txt.length() * (h / 2) + 20, h);
+        this.getImage().scale(txt.length() * 10 + 20, h);
         //etImage().setTransparency(0);
         
         this.font = new Font(h / 2);

@@ -33,6 +33,13 @@ public class Config {
     // Odds a silo won't fire, to avoid all silos firing at the same time
     public static final double DONT_FIRE_PROB = 0.95;
     
+    // Reduction of population per nuke in a city
+    public static final double NUKE_POPULATION_CITY = 0.87;
+    
+    
+    // Military unit score value
+    public static final int MILITARY_UNIT_VALUE = 1000;
+    
     // Make constructor private so it can't be constructed
     private Config() {}
 }

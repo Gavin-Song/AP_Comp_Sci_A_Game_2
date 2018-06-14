@@ -55,6 +55,17 @@ public class GameState
         }
     }
     
+    public Player getPlayerByCountry(String name) {
+        if (human_player.getCountry().getName().equals(name)) 
+            return human_player;
+        for (AIPlayer player: this.ai_players) {
+            if (player.getCountry().getName().equals(name)) {
+                return player;
+            }
+        }
+        return null;
+    }
+    
     public void doCountryMoves() {
         Silo silo;
         do {
@@ -81,5 +92,17 @@ public class GameState
     public ArrayList<AIPlayer> getAIPlayers()
     {
         return(ai_players);
+    }
+    
+    public ArrayList<String> getLeaderboardData() {
+        ArrayList<String> data = new ArrayList<String>();
+        data.add(human_player.getCountry().getName() + ": " + human_player.getScore());
+        
+        for (AIPlayer player: this.ai_players) {
+            data.add(player.getCountry().getName() + ": " + player.getScore());
+        }
+        
+        data.sort((a, b) -> new Integer(b.split(": ")[1]).compareTo(new Integer(a.split(": ")[1])));
+        return data;
     }
 }
